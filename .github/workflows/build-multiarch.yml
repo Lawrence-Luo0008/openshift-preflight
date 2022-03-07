@@ -46,8 +46,8 @@ jobs:
         uses: redhat-actions/podman-login@v1
         with:
           registry: ${{ secrets.registry }}
-          username: ${{ secrets.QUAY_USER }}
-          password: ${{ secrets.QUAY_PWD }}
+          username: ${{ secrets.REGISTRY_USER }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
           
       - name: Push manifest
         run: |
