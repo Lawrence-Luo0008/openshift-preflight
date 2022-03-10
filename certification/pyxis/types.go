@@ -4,7 +4,7 @@ import "github.com/redhat-openshift-ecosystem/openshift-preflight/certification/
 
 type CertImage struct {
 	ID                     string       `json:"_id,omitempty"`
-	Certified              bool         `json:"certified" default:"false"`
+	Certified              bool         `json:"certified"`
 	Deleted                bool         `json:"deleted" default:"false"`
 	DockerImageDigest      string       `json:"docker_image_digest,omitempty"`
 	DockerImageID          string       `json:"docker_image_id,omitempty"`
@@ -81,8 +81,8 @@ type CertProject struct {
 
 type Container struct {
 	DockerConfigJSON string `json:"docker_config_json"`
-	Type             string `json:"type " default:"Containers"` // conditionally required
-	ISVPID           string `json:"isv_pid,omitempty"`          // required
+	Type             string `json:"type" default:"Containers"` // conditionally required
+	ISVPID           string `json:"isv_pid,omitempty"`         // required
 }
 
 type Layer struct {
